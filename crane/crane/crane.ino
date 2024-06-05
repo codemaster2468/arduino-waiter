@@ -14,11 +14,11 @@ Servo endServo;
 
 // Define initial angles for servos
 int baseAngle = 135;  // 90 degrees (middle position)
-int middleAngle = 55;
+int middleAngle = 75;
 int endAngle = 0;
 
 void moveCraneDown() {
- for (int angle = 55; angle <= 90; angle++) {
+ for (int angle = 75; angle <= 90; angle++) {
     middleServo.write(angle); // Move the servo to the current angle
     delay(15); // Adjust this delay as needed for the desired speed of rotation
   }
@@ -37,7 +37,7 @@ void moveCraneUp() {
     delay(15); // Adjust this delay as needed for the desired speed of rotation
   }
 
-  for (int angle = 90; angle >= 55; angle--) {
+  for (int angle = 90; angle >= 75; angle--) {
     middleServo.write(angle); // Move the servo to the current angle
     delay(15); // Adjust this delay as needed for the desired speed of rotation
   }
